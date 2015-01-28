@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<title>DS-GA 1003: Machine Learning and Computational Statistics, Spring 2015</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" media="only screen and (max-width: 770px)" href="styles/tablet-and-phone.css">
+<link rel="stylesheet" media="only screen and (max-width: 420px)" href="styles/phone.css">
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#resources">Resources</a>
+    <a href="#lectures">Lectures</a>
+    <a href="#assignments">Assignments</a>
+    <!--<a href="#project">Project</a>-->
+    <a href="#people">People</a>
+</nav>
+
+<section id="home">
+    <h1>
+        Machine Learning and Computational Statistics
+        <span class="course">
+            DS-GA 1003 · Spring 2015 ·
+            <span class="department">
+                <a href="http://cds.nyu.edu/">NYU Center for Data Science</a>
+            </span>
+        </span>
+    </h1>
+
+    <div id="course-info">
+        <div>
+            <p><strong>Instructor</strong><span>David Rosenberg <a class="icon email" href="mailto:dr129@nyu.edu"></a></span>
+            <p><strong>Lecture</strong><span>Wednesdays 5:10pm–7pm, <a href="https://www.cims.nyu.edu/dd16/Location/directions.html">Warren Weaver Hall</a> 109</span>
+            <p><strong>Lab</strong><span>Thursday 6:10pm–7pm, <a href="https://www.cims.nyu.edu/dd16/Location/directions.html">Warren Weaver Hall</a> 109</span>
+        </div>
+    </div>
+
+    <section id="this-week">
+        <h1>This week</h1>
+    
+        <div class="week-summary">
+                <section>
+                    <h1><a href="#lecture-week-1">Topics</a></h1>
+                    <ul>
+                                <li>Course mechanics</li>
+                                <li>Statistical learning theory framework</li>
+                                <li>Gradient and stochastic gradient descent</li>
+                                <li>Matrix differentiation</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1><a href="#lecture-week-1">Reading</a></h1>
+    
+                    <ul><ul>
+            <li>Your favorite math review notes (Pre)</li>
+        
+            <li><a href="http://www.cs.ubc.ca/~murphyk/MLbook/pml-intro-22may12.pdf">KPM Ch 1</a></li>
+            <li><a href="refs/bottou-sgd-tricks-2012.pdf">Bottou's SGD Tricks</a></li>
+            <li>BV Preface, Ch 1</li></ul>
+    <ul></ul>
+    </ul>
+                </section>
+                <section class="assignment">
+                    <h1><a href="#assignment-homework-1">Homework 1</a></h1>
+                    <p>Ridge regression and SGD</p>
+    
+                    <p class="deadline"><strong>Due:</strong> February 4th, 4pm</p>
+                    <div class="files">
+                            <a href="homework/regression-SGD/hw1.pdf" target="_blank" class="pdf icon">hw1.pdf</a>
+                            <a href="homework/regression-SGD/hw1.zip" class="zip icon">hw1.zip</a>
+                    </div>
+                </section>
+        </div>
+    </section>
+</section>
+<section id="about">
+    <h1>About This Course</h1>
+
+    <div class="module">
+        <p>This course covers a wide variety of topics in machine learning and statistical modeling. While mathematical methods and theoretical aspects will be covered, the primary goal is to provide students with the tools and principles needed to solve both the traditional and the novel data science problems found in practice.  This course will also serve as a foundation on which more specialized courses and further independent study can build.</p>
+
+	    <p>This is a required course for the Center for Data Science's <a href="http://cds.nyu.edu/academics/ms-in-data-science/">Masters degree in Data Science</a>, and the course is designed for the students in this program.  Other interested students who satisfy the prerequisites are welcome to take the classs as well.  Note that this class is a continuation of <a href="http://cds.nyu.edu/course-pages/ds-ga-1001-intro-data-science/">DS-GA-1001 Intro to Data Science</a>, which covers some important, fundamental data science topics that may not be explicitly covered in this class (e.g. data cleaning, cross-validation, decision trees, and sampling bias).</p>
+
+        <p> Course details can be found in the <a href="docs/syllabusDS-GA1003-Spring2015.pdf">syllabus</a>.</p>
+
+        <p> This term we will be using Piazza for class discussion. The system is highly catered to getting you help fast and efficiently from classmates, the Lab Instructor, graders, and the Instructor. Rather than emailing questions to the teaching staff, you are encouraged to <a href="https://piazza.com/nyu/spring2015/dsga1003/home">post your questions on Piazza</a>. If you have any problems or feedback for the developers, email <a href="mailto:team@piazza.com">team@piazza.com</a>.</p>
+
+
+
+        <p>For registration information, please contact <a href="mailto:varsha.tiger@nyu.edu">Varsha Tiger</a>.
+    </div>
+
+    <section>
+	<h1>Schedule</h1>
+	<ul>
+	    <li>Lectures: Wednesdays 5:10pm–7pm, Warren Weaver Hall 109
+	    <li>Lab Sections: Thursday 6:10pm–7pm, Warren Weaver Hall 109
+	    <li>Office Hours (<a href="#people">see below</a>)
+	    <li>See also the <a href="https://www.google.com/calendar/embed?src=q5os9dtr9kebkkvv17lqtqj5qc%40group.calendar.google.com&ctz=America/New_York">Course Calendar</a> for all schedule information.
+	</ul>
+    </section>
+    <section>
+        <h1>Prerequisites</h1>
+        <ul>
+            <li><a href="http://cds.nyu.edu/course-pages/ds-ga-1001-intro-data-science/"><strong>DS-GA-1001: Intro to Data Science</strong></a> or its equivalent
+            <li><strong>Solid mathematical background</strong>, equivalent to a 1-semester undergraduate course in each of the following: linear algebra, multivariate calculus (primarily differential calculus), probability theory, and statistics.
+            <li><strong>Python programming required</strong> for all homework assignments (not necessary for auditors)
+            <li><em>Recommended:</em> Computer science background up to a "data structures and algorithms” course
+            <li><em>Recommended:</em> At least one advanced, proof-based mathematics course
+            <li>Some prerequisites may be waived with permission of the instructor.
+        </ul>
+    </section>
+    <section>
+        <h1>Grading</h1>
+        <p><strong>Problem sets (60%) + Midterm exam (20%) + Project (20%)</strong></p>
+        <p>
+            Up to (2%) extra credit can be earned by answering student questions on Piazza and for positive contributions to class and lab discussions; there will be additional extra credit opportunities in the homework assignments in the form of optional problems and competitions.
+        </p>
+    	<p><em>The course conforms to <a href="http://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html">NYU’s policy on academic integrity for students</a>.</em></p>
+    </section>
+</section>
+
+<section id="resources">
+    <h1>Resources</h1>
+
+    <section id="textbooks">
+        <h1>Textbooks</h1>
+
+        <a href="http://www.cs.ubc.ca/~murphyk/MLbook/index.html"><img src="images/murphy-1x.jpg" srcset="images/murphy-1x.jpg 1x, images/murphy-2x.jpg 2x, images/murphy-3x.jpg 3x" alt="The cover of Machine Learning: a Probabilistic Perspective"></a>
+        <a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/"><img src="images/hastie-1x.png" srcset="images/hastie-1x.png 1x, images/hastie-2x.jpg 2x, images/hastie-3x.jpg 3x" alt="The cover of Elements of Statistical Learning"></a>
+        <a href="http://stanford.edu/~boyd/cvxbook/"><img src="images/boyd-1x.jpg" srcset="images/boyd-1x.jpg 1x, images/boyd-2x.jpg 2x, images/boyd-original.jpg 3x" alt="The cover of Convex Optimization"></a>
+
+        <dl>
+            <dt><a href="http://www.cs.ubc.ca/~murphyk/MLbook/index.html"><cite>Machine Learning: a Probabilistic Perspective</cite> (Kevin P. Murphy)</a>
+            <dd>This will be the required textbook for the class. It was chosen for several reasons: First, it covers an unusually broad set of topics, and it will serve you well as a reference for many topics beyond the scope of this course. Second, it is has a surprisingly extensive coverage of recent advances in the field, incorporating material that would otherwise only be availabe in research papers.  Finally, if you're a Matlab coder, there is <a href="https://github.com/probml/pmtk3">extensive software support</a>.
+
+            <dt><a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/"><cite>Elements of Statistical Learning</cite> (Hastie, Friedman, and Tibshirani)</a>
+            <dd>This book is available as a free PDF, and it will serve a nice complement to Murphy's book.  Despite its popularity and the pretty pictures, this is not an easy book.  It's written by three statisticians who invented many of the techniques that they write about.
+
+    	    <dt><a href="http://stanford.edu/~boyd/cvxbook/"><cite>Convex Optimization</cite> (Boyd and Vandenberghe)</a>
+            <dd>This book (also available as a free PDF) was an instant hit in the machine learning community when it was published in 2004.  Most of the optimization problems that we know how to solve are convex problems.  We will be making light use of this book, mostly for its coverage of Lagrangians and duality.  However, it's a good book to get familiar with, as it's very well written and it covers a lot of techniques used in more advanced machine learning literature.
+        </dl>
+    </section>
+
+    <section id="references">
+    	<h1>Other tutorials and references</h1>
+
+	    <p>(If you find additional references that you recommend, please <a href="https://piazza.com/nyu/spring2015/dsga1003/home">share them on Piazza</a> and we can add them here.)
+
+    	<ul>
+            <li><a href="refs/matrixCookbook-15Nov2012.pdf">The Matrix Cookbook</a> has lots of facts and identities about matrices and certain probability distributions.
+            <li><a href="http://cs229.stanford.edu/section/cs229-prob.pdf">Stanford CS229: "Review of Probability Theory"</a>
+            <li><a href="http://cs229.stanford.edu/section/cs229-linalg.pdf">Stanford CS229: "Linear Algebra Review and Reference"</a>
+	    <li><a href="http://www.umiacs.umd.edu/~hal/courses/2013S_ML/math4ml.pdf">Math for Machine Learning</a> by Hal Daumé III
+            <li><a href="http://nbviewer.ipython.org/github/briandalessandro/DataScienceCourse/tree/master/ipython/">Brian Dalessandro's iPython notebooks</a> from DS-GA 1001: Introduction to Data Science
+	</ul>
+    </section>
+
+    <section id="software">
+    	<h1>Software</h1>
+
+    	<ul>
+            <li><a href="http://www.cvxpy.org/en/latest/">CVXPY</a> and <a href="http://cvxopt.org/index.html">CVXOPT</a> are for solving convex optimization problems in Python.
+            <li><a href="http://deeplearning.net/software/theano/">Theano</a> has symbolic differentiation and facilitates GPU usage. It's a favorite for some neural networks folks.
+            <li><a href="http://www.numpy.org/">NumPy</a> is "the fundamental package for scientific computing with Python." Our homework assignments will use NumPy arrays extensively.
+        </ul>
+    </section>
+
+
+
+</section>
+
+<section id="lectures">
+    <h1>Lectures</h1>
+
+    <ul class="abbreviations">
+        <li> (KPM) refers to Kevin P. Murphy's book <a href="http://www.cs.ubc.ca/~murphyk/MLbook/index.html"><cite>Machine Learning: a Probabilistic Perspective</cite></a>
+        <li> (HFT) refers to Hastie, Friedman, and Tibshirani's book <a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/"><cite>The Elements of Statistical Learning</cite></a>
+        <li> (BV) refers to Boyd and Vandenberghe's <a href="http://stanford.edu/~boyd/cvxbook/"><cite>Convex Optimization</cite></a>
+    </ul>
+
+        <section class="module" id="lecture-week-1">
+        <h1>Week 1</h1>
+    
+                <section>
+                    <div class="label"><h1>Lecture <span class="date">Jan 28</span></h1></div>
+                    <div class="topics">
+                        <ul>
+                                <li>Course mechanics</li>
+                                <li>Statistical learning theory framework</li>
+                                <li>Gradient and stochastic gradient descent</li>
+                        </ul>
+                    </div>
+                    <div class="reading icon">
+                        <h1>Reading</h1>
+    
+                        <ul><ul>
+            <li>Your favorite math review notes (Pre)</li>
+        
+            <li><a href="http://www.cs.ubc.ca/~murphyk/MLbook/pml-intro-22may12.pdf">KPM Ch 1</a></li>
+            <li><a href="refs/bottou-sgd-tricks-2012.pdf">Bottou's SGD Tricks</a></li>
+            <li>BV Preface, Ch 1</li></ul>
+    </ul>
+                    </div>
+                    <div class="slides icon">
+                        <h1>Slides and Notes</h1>
+                        <ul>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="label"><h1>Lab <span class="date">Jan 29</span></h1></div>
+                    <div class="topics">
+                        <ul>
+                                <li>Matrix differentiation</li>
+                        </ul>
+                    </div>
+                    <div class="reading icon">
+                        <h1>Reading</h1>
+    
+                        <ul><ul></ul>
+    </ul>
+                    </div>
+                    <div class="slides icon">
+                        <h1>Slides and Notes</h1>
+                        <ul>
+                        </ul>
+                    </div>
+                </section>
+        </section>
+        <section class="module" id="lecture-week-2">
+        <h1>Week 2</h1>
+    
+                <section>
+                    <div class="label"><h1>Lecture <span class="date">Feb 4</span></h1></div>
+                    <div class="topics">
+                        <ul>
+                                <li>Excess risk decomposition</li>
+                                <li>L1/L2 regularization</li>
+                                <li>Loss functions</li>
+                                <li>Optimization methods for Lasso</li>
+                                <li>SVM intro</li>
+                                <li>Convexity</li>
+                        </ul>
+                    </div>
+                    <div class="reading icon">
+                        <h1>Reading</h1>
+    
+                        <ul><ul></ul>
+    </ul>
+                    </div>
+                    <div class="slides icon">
+                        <h1>Slides and Notes</h1>
+                        <ul>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="label"><h1>Lab <span class="date">Feb 5</span></h1></div>
+                    <div class="topics">
+                        <ul>
+                                <li>Subgradient descent</li>
+                        </ul>
+                    </div>
+                    <div class="reading icon">
+                        <h1>Reading</h1>
+    
+                        <ul><ul>
+            <li><a href="http://web.stanford.edu/class/ee364b/lectures.html">Boyd's subgradient notes</a></li></ul>
+    </ul>
+                    </div>
+                    <div class="slides icon">
+                        <h1>Slides and Notes</h1>
+                        <ul>
+                        </ul>
+                    </div>
+                </section>
+        </section>
+</section>
+<section id="assignments">
+    <h1>Assignments</h1>
+
+    <div class="policies">
+        <p><strong>Homework Submission:</strong> Homework should be submitted through <a href="https://newclasses.nyu.edu/portal">NYU Classes</a>.
+
+        <p><strong>Late Policy:</strong> Homeworks are due at 4pm on the date specified.  Homeworks will still be accepted for 48 hours after this time but will have a 20% penalty.
+
+        <p><strong>Collaboration Policy:</strong> You may discuss problems with your classmates. However, you must write up the homework solutions and the code from scratch, without referring to notes from your joint session.  In your solution to each problem, you must write down the names of any person with whom you discussed the problem—this will not affect your grade.
+    </div>
+
+        <section class="homework" id="assignment-homework-0">
+            <div class="module">
+                <div class="title">
+                    <h1>Homework 0</h1>
+                    <p>Test <a href="https://newclasses.nyu.edu/portal">NYU Classes</a> homework submission</p>
+                </div>
+                <p class="deadline"><strong>Due:</strong> January 30th, 4pm</p>
+                <div class="files">
+                </div>
+            </div>
+        </section>
+        <section class="homework" id="assignment-homework-1">
+            <div class="module">
+                <div class="title">
+                    <h1>Homework 1</h1>
+                    <p>Ridge regression and SGD</p>
+                </div>
+                <p class="deadline"><strong>Due:</strong> February 4th, 4pm</p>
+                <div class="files">
+                        <a href="homework/regression-SGD/hw1.pdf" target="_blank" class="pdf icon">hw1.pdf</a>
+                        <a href="homework/regression-SGD/hw1.zip" class="zip icon">hw1.zip</a>
+                </div>
+            </div>
+        </section>
+</section>
+
+<!--
+<section id="project">
+    <h1>Project</h1>
+</section>
+-->
+
+<section id="people">
+    <h1>People</h1>
+
+    <section>
+        <h1>Instructor</h1>
+
+        <div class="person module instructor">
+            <img src="images/people/david.jpg" alt="A photo of David Rosenberg">
+            <div class="info">
+                <p class="name"><a href="http://www.linkedin.com/pub/david-rosenberg/4/241/598">Dr. David Rosenberg</a>
+                <p class="email"><a href="mailto:david.davidr@gmail.com">dr129@nyu.edu</a>
+                <p class="office-hours"><strong>Office Hours:</strong> TBD or By Appointment
+                <p class="bio">David is Chief Scientist of <a href="http://national.yp.com/mobile/labs/">YP Mobile Labs</a> at <a href="http://www.yellowpages.com">YP</a>.
+            </div>
+        </div>
+    </section>
+
+    <section class="multiple-people">
+        <h1>Graders</h1>
+
+        <ul>
+            <li class="person module">
+                <img src="images/people/haoxu.jpg" alt="A photo of Hao Xu">
+                <div class="info">
+                    <p class="name"><a href="http://www.linkedin.com/pub/hao-xu/81/8b2/4b6">Hao Xu</a>
+                    <p class="email"><a href="mailto:hx364@nyu.edu">hx364@nyu.edu</a>
+                    <p class="bio">Hao is a second year student in CDS Data Science Masters program. In the fall he will begin as a data scientist at AIG.
+                </div>
+            <li class="person module">
+                <img src="images/people/ranbi.jpg" alt="A photo of Ran Bi">
+                <div class="info">
+                    <p class="name"><a href="http://www.linkedin.com/pub/ran-bi/89/7a0/752">Ran Bi</a>
+                    <p class="email"><a href="mailto:ranbi@nyu.edu">ranbi@nyu.edu</a>
+                    <p class="bio">Ran is currently a second year student in the Data Science
+program at NYU. She will begin working on the AIG science team in Summer 2015.
+                </div>
+            <li class="person module">
+                <img src="images/people/prasoon.jpg" alt="A photo of Prasoon Goyal">
+                <div class="info">
+                    <p class="name"><a href="http://www.cs.nyu.edu/~pg1338/index.html">Prasoon Goyal</a>
+                    <p class="email"><a href="mailto:pg1338@nyu.edu">pg1338@nyu.edu</a>
+                    <p class="bio">Prasoon is currently a Masters student in Computer Science at NYU.
+                </div>
+
+        </ul>
+    </section>
+
+    <section class="multiple-people">
+        <h1>Project Advisors</h1>
+
+        <ul>
+            <li class="person module">
+                <img src="images/people/gideon.jpg" alt="A photo of Dr. Gideon Mann">
+                <div class="info">
+                    <p class="name"><a href="https://sites.google.com/site/gideonmann/">Dr. Gideon Mann</a>
+                    <p class="bio">Gideon is currently the Head of Data Science in the CTO office at Bloomberg LP.
+                </div>
+            <li class="person module">
+                <img src="images/people/kurt.jpg" alt="A photo of Dr. Kurt Miller">
+                <div class="info">
+                    <p class="name"><a href="http://ai.stanford.edu/~tadayuki/">Dr. Kurt Miller</a>
+                    <p class="bio">Kurt is a researcher at the quantitative hedge fund PDT Partners.
+                </div>
+        </ul>
+    </section>
+</section>
+
+<footer>
+    <p>This website is developed <a href="https://github.com/davidrosenberg/ml2015/">on GitHub</a>; feel free to <a href="https://github.com/davidrosenberg/ml2015/issues">report issues or send feature requests</a>.
+</footer>
+
+<script async defer src="scripts/navigation.js"></script>
